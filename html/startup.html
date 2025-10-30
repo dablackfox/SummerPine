@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Select Store</title>
+  <!-- Corrected the link tags -->
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/login.css">
+</head>
+<body>
+  <img id="logo" src="https://library.cwanz.online/cw_y.png" alt="Cartridge World Logo">
+  <h2>Select a Store</h2>
+  <select id="storeSelector">
+  </select>
+  <br>
+  <button id="loadButton">Load Store</button>
+
+  <script>
+    fetch('../config/multi_store_config.json')
+      .then(response => response.json())
+      .then(data => {
+        const selector = document.getElementById('storeSelector');
+        data.stores.forEach(store => {
+          const option = document.createElement('option');
+          option.value = store.url;
+          option.textContent = store.name;
+          selector.appendChild(option);
+        });
+      });
+
+    document.getElementById('loadButton').addEventListener('click', () => {
+      const selectedUrl = document.getElementById('storeSelector').value;
+      if (window.electronAPI && window.electronAPI.setStoreUrl) {
+        window.electronAPI.setStoreUrl(selectedUrl);
+      } else {
+        alert("Electron API not available.");
+      }
+    });
+  </script>
+  <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const setStoreButton = document.getElementById('setStoreButton');
+    const storeUrlInput = document.getElementById('storeUrlInput');
+
+    if (setStoreButton && storeUrlInput) {
+      setStoreButton.addEventListener('click', () => {
+        const url = storeUrlInput.value;
+        window.electronAPI.setStoreUrl(url);
+      });
+    } else {
+      console.warn('Store button or input not found.');
+    }
+  });
+  </script>
+</body>
+</html>
