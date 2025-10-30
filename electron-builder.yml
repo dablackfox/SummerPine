@@ -1,0 +1,11 @@
+win:
+  icon: build/icon.ico
+  artifactName: SummerPine_pc.${ext}
+
+mac:
+  icon: build/icon.icns
+  artifactName: SummerPine_mac.${ext}
+
+linux:
+  icon: build/icon.png
+  artifactName: SummerPine_linux.${ext}

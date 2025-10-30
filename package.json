@@ -1,0 +1,40 @@
+{
+  "name": "summerpine",
+  "version": "1.0.0",
+  "main": "main.js",
+  "description": "A custom Electron-based web wrapper for SummerPine",
+  "author": "Martin Fenwick",
+  "scripts": {
+    "start": "electron .",
+    "build:linux-win": "electron-builder --win --linux",
+    "build:mac": "electron-builder --mac"
+  },
+  "build": {
+    "appId": "com.example.summerpine",
+    "productName": "SummerPine",
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico",
+      "artifactName": "SummerPine_pc.${ext}"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "build/icon.icns",
+      "artifactName": "SummerPine_mac.${ext}"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "build/icon.png",
+      "artifactName": "SummerPine_linux.${ext}"
+    }
+  },
+  "dependencies": {
+    "@electron/remote": "^2.1.3",
+    "dotenv": "^17.2.3",
+    "iconutil": "^1.0.2"
+  },
+  "devDependencies": {
+    "electron": "^29.0.0",
+    "electron-builder": "^26.0.12"
+  }
+}
