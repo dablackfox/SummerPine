@@ -1,0 +1,36 @@
+{
+  "stores": [
+    {
+      "name": "Murwillumbah",
+      "url": "https://murwillumbah.cwanz.online/"
+    },
+    {
+      "name": "Uluru",
+      "url": "https://cwanz.docs.fieldpine.com/"
+    },
+    {
+      "name": "Cowra",
+      "url": "https://cowra.cwanz.online/"
+    },
+    {
+      "name": "iig",
+      "url": "https://iig.cwanz.online/saas/login.htm"
+    },
+    {
+      "name": "Online QLD",
+      "url": "https://myportal.cwanz.online/bigcommerce_store.htm"
+    },
+    {
+      "name": "Cairns",
+      "url": "https://Cairns.cwanz.online"
+    },
+    {
+      "name": "Murwillumbah",
+      "url": "https://murwillumbah.cwanz.online"
+    },
+    {
+      "name": "Place Holder",
+      "url": "https://PlaceHolder.cwanz.online/"
+    }
+  ]
+}
