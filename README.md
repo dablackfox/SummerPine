@@ -94,5 +94,3 @@ If you want, I can add `dist/` to `.gitignore` and run the `git rm -r --cached d
 See `LICENSE.md` at the repository root.
 
 ---
-
-If you'd like this documentation as an HTML page (`docs/index.html`), or want me to add it to `README.md` or wire up a docs script (e.g. `npm run docs`), tell me which you prefer and I'll add it and commit the change.
